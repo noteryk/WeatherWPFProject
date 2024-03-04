@@ -1,0 +1,24 @@
+﻿<Window x:Class="WeatherWPFProject.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:m="clr-namespace:Microsoft.Maps.MapControl.WPF;assembly=Microsoft.Maps.MapControl.WPF"
+        xmlns:local="clr-namespace:WeatherWPFProject"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="41*"/>
+            <ColumnDefinition Width="259*"/>
+        </Grid.ColumnDefinitions>
+        <m:Map 
+      x:Name="map"
+      CredentialsProvider="XQbLI0GKIpQs6AY0KV9o~2G38eQ2AKJfFygLkBRTj5g~Ahd-ROiqfaFwAvwPhCj8MjdYbFkugtUlnDiQYHvB7jv_e53Fzyw0au82avs0zwVL"
+      MouseDoubleClick="Dblclick" Grid.ColumnSpan="2" Cursor="No"
+  />
+
+        <TextBox x:Name="searchBox" Grid.Column="0" Margin="15,2,662,384" Grid.ColumnSpan="2" />
+        <Button x:Name="searchButton" Grid.Column="1" Content="Search" Click="buttonclick" Margin="15,3,530,384" />
+    </Grid>
+</Window>
